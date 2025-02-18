@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\DasboradController;
 Route::view('/', 'welcome');
 
-Route::view('dashboard', 'dashboard')
+Route::get('dashboard', [DasboradController::class, 'index'])
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
