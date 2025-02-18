@@ -35,6 +35,14 @@ class DatabaseSeeder extends Seeder
             'remember_token' => Str::random(10),
         ]);
 
+        User::factory()->create([
+            'name' => 'Denis2',
+            'email' => 'denis2@denis.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('denis123'),
+            'remember_token' => Str::random(10),
+        ]);
+
         echo "::::::::: END SEED :::::::::";
     }
 }
